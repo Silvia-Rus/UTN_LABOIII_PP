@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./js/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Autos pitucos</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+    <header>
+        <!--<img src="assets/logoauto.svg" alt="logo auto">-->
+        <nav>
+            <ul>
+                <li><a href="#"></a>Nosotros</li> <!--Se pone hash porque no tenemos el link todavía (buena práctica)-->
+                <li><a href="#"></a>Anuncios</li>
+                <li><a href="#"></a>Blog</li>
+                <li><a href="#"></a>Contacto</li>
+            </ul>
+        </nav>
+        <h1>Administración</h1>
+    </header>
+  
+    <main class="crud">
+        <div id=formulario>
+        <section class="form-inmueble">
+            <form>
+                <label for="txtTitulo">Título: </label>
+                </br>
+                <input type="text" name="txtTitulo" placeholder="Título" autocomplete="off" required>
+                </br>
+                </br>
+
+                <fieldset>
+                    <legend> Transacción: </legend>
+                    <input type="radio" name="rdoOperacion" value="alquiler"> Alquiler <br>
+                    <input type="radio" name="rdoOperacion" value="venta"> Venta <br>
+                </fieldset>
+
+                <label for="txtDescripcion">Descripción: </label>
+                </br>
+                <textarea name="txtDescripcion" placeholder="Descripción" autocomplete="off" required></textarea>
+                </br>
+                </br>
+
+                <label for="nmbrPrecio">Precio: </label>
+                </br>
+                <input type="number" name="nmbrPrecio" placeholder="Precio en pesos" min="1" autocomplete="off" required>
+                </br>
+                </br>
+
+                <label for="nmbrPuertas">Nª puertas: </label>
+                </br>
+                <input type="number" name="nmbrPuertas" placeholder="Puertas" min="1" autocomplete="off" required>
+                </br>
+                </br>
+
+                <label for="nmbrKms">KMs </label>
+                </br>
+                <input type="number" name="nmbrKms" placeholder="Kms" min="1" autocomplete="off" required>
+                </br>
+                </br>
+
+                <label for="nmbrPotencia">Potencia: </label>
+                </br>
+                <input type="number" name="nmbrPotencia" placeholder="Kms" autocomplete="off" required>
+                </br>
+                </br>
+                <input type="submit" id="enviar" value="Guardar">
+                <input type="button" id="eliminar" name ="eliminar" hidden="hidden" value="Eliminar">
+                <input type="hidden" name="txtId"> <!-- Lo necesito para saber qué id-->
+            </form>
+        </section>
+        </div>
+        <div id="tabla">
+        <section class="lista-autos">
+            <div id="divTabla"></div>
+        </section>
+        <section class="lista-autosPrincipal">
+            <div id="divTablaIndex"></div>
+        </section>
+        </div>
+        <footer>
+            <nav>
+                <li><a href="./nosotros.html"></a>Nosotros</li> <!--Se pone hash porque no tenemos el link todavía (buena práctica)-->
+                <li><a href="./anuncios.html"></a>Anuncios</li>
+                <li><a href="./blog.html"></a>Blog</li>
+                <li><a href="./contacto.html"></a>Contacto</li>
+                <p>Todos los derechos reservados 2021 &copy;</p>
+            </nav>
+        </footer>
+    </main>    
+</body>
+</html>

@@ -1,0 +1,14 @@
+div{
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+
+.rojo,label{
+    background-color: red;
+}
+
+#formulario{
+    background-color: chocolate;
+}
+
