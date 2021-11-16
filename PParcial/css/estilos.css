@@ -1,14 +1,138 @@
-div{
-    background-color: aqua;
-    border: 1px solid black;
+
+*{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: wheat;
+}
+
+ul{
+    list-style: none;   
+}
+
+#headerBackend h1, h2 {
+    text-align: center;
 }
 
 
-.rojo,label{
+input[type=text], input[type=number]  {
+    width: 100%;
+}
+
+
+fieldset, textarea{
+    width: 100%;
+    background-color:cornsilk;
+
+}
+
+input{
+    background-color:cornsilk;  
+}
+
+form{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#logo{
+
+    width: 15%;
+    height: 15%;
+    float:left;
+}
+
+#card{
+
+    background-color:beige;
+    border:solid;    
+}
+
+#card p{
+
+    background-color:beige;
+}
+
+.lista_header {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+
+.lista_horizontal li{
+    display: inline;
+    margin: 0 40px 0 0;
+}
+
+
+#tabla-footer{
+      width:100%;
+}
+ 
+  #derechos p{
+      text-align: right;
+      padding: 0;
+      margin: 0;
+}
+
+  #headerIndex{
+    background-image: url(../assets/coches_background1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#headerIndex h1{
+    background-color:transparent;
+  
+}
+
+#divTablaBackend table{
+    margin-left: auto;
+    margin-right: auto;
+    border: solid; 
+   
+}
+
+#divTablaBackend th{
+    background-color:brown;
+}
+
+#divTablaBackend p{
+    text-align:center;
+
+}
+
+#imagen_admin{
+    width: 100%;
+    height: 200px;
+}
+
+.spinner{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+
+}
+
+#textoAlerta{
     background-color: red;
+    text-align: center;
 }
 
-#formulario{
-    background-color: chocolate;
+
+@media (max-width: 600px) {
+  #imagen_admin {
+    display:none;
+   }
 }
+
+  
+
+
 

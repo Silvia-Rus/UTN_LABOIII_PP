@@ -4,29 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/backendScript.js" type="module"></script>
 
-    <script src="./js/scripts.js" type="module"></script>
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
     <title>Autos pitucos</title>
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
-    <header>
-        <!--<img src="assets/logoauto.svg" alt="logo auto">-->
-        <nav>
-            <ul>
-                <li><a href="#"></a>Nosotros</li> <!--Se pone hash porque no tenemos el link todavía (buena práctica)-->
-                <li><a href="#"></a>Anuncios</li>
-                <li><a href="#"></a>Blog</li>
-                <li><a href="#"></a>Contacto</li>
-            </ul>
-        </nav>
+    <header id="headerBackend">
+        <nav>        
+            <table>
+                <tr>
+                    <td>
+                        <a href="./index.html">
+                            <img id="logo" src="assets/logoauto.png" alt="logo auto" id="logo">
+                        </a>
+                    </td>
+                    <td>
+                     
+                        <ul id="lista-header">
+                            <li><a href="#"></a>Nosotros</li> 
+                            <li><a href="#"></a>Anuncios</li>
+                            <li><a href="#"></a>Blog</li>
+                            <li><a href="#"></a>Contacto</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+        </nav>  
         <h1>Administración</h1>
+        <img id="imagen_admin" src="assets/coches_background2.jpeg">
     </header>
   
     <main class="crud">
         <div id=formulario>
+        <div id="tituloCRUD"> <h2>Alta de producto</h2> </div>
         <section class="form-inmueble">
             <form>
                 <label for="txtTitulo">Título: </label>
@@ -35,12 +51,18 @@
                 </br>
                 </br>
 
+            
+                <!--CHECKBOX-->
                 <fieldset>
-                    <legend> Transacción: </legend>
-                    <input type="radio" name="rdoOperacion" value="alquiler"> Alquiler <br>
-                    <input type="radio" name="rdoOperacion" value="venta"> Venta <br>
+                <legend> Transacción: </legend>
+                <label><input type="checkbox" name="chkAlquiler" value="alquiler"> Alquiler</label><br>
+                <label><input type="checkbox" name="chkVenta" value="venta"> Venta</label><br>
                 </fieldset>
 
+                
+                </br>
+                </br>
+                
                 <label for="txtDescripcion">Descripción: </label>
                 </br>
                 <textarea name="txtDescripcion" placeholder="Descripción" autocomplete="off" required></textarea>
@@ -53,44 +75,62 @@
                 </br>
                 </br>
 
+
                 <label for="nmbrPuertas">Nª puertas: </label>
                 </br>
-                <input type="number" name="nmbrPuertas" placeholder="Puertas" min="1" autocomplete="off" required>
+                <i class="fas fa-door-open" aria-hidden="true"></i> 
+                <input type="number" name="nmbrPuertas" placeholder="Puertas" min="1" autocomplete="off" required>                 
                 </br>
                 </br>
 
                 <label for="nmbrKms">KMs </label>
                 </br>
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
                 <input type="number" name="nmbrKms" placeholder="Kms" min="1" autocomplete="off" required>
                 </br>
                 </br>
 
                 <label for="nmbrPotencia">Potencia: </label>
                 </br>
-                <input type="number" name="nmbrPotencia" placeholder="Kms" autocomplete="off" required>
+                <i class="fas fa-bolt" aria-hidden="true"></i>
+                <input type="number" name="nmbrPotencia" placeholder="Potencia" autocomplete="off" required>             
                 </br>
                 </br>
-                <input type="submit" id="enviar" value="Guardar">
-                <input type="button" id="eliminar" name ="eliminar" hidden="hidden" value="Eliminar">
-                <input type="hidden" name="txtId"> <!-- Lo necesito para saber qué id-->
+
+                <input type="submit" id="enviar" value="&#xf0c7; Guardar" style="font-family: FontAwesome">
+                <input type="button" id="eliminar" name ="eliminar" hidden="hidden" value="&#xf1f8; Eliminar" style="font-family: FontAwesome">
+                <input type="button" id="cancelar" value="&#xf00d; Cancelar" style="font-family: FontAwesome">
+                <input type="hidden" name="txtId"> 
             </form>
         </section>
         </div>
+        <br><br>
         <div id="tabla">
         <section class="lista-autos">
-            <div id="divTabla"></div>
-        </section>
-        <section class="lista-autosPrincipal">
-            <div id="divTablaIndex"></div>
+            <div id="divAlert"></div>
+            <div id="divTablaBackend"></div>
+          
         </section>
         </div>
+        <br><br>
         <footer>
             <nav>
-                <li><a href="./nosotros.html"></a>Nosotros</li> <!--Se pone hash porque no tenemos el link todavía (buena práctica)-->
-                <li><a href="./anuncios.html"></a>Anuncios</li>
-                <li><a href="./blog.html"></a>Blog</li>
-                <li><a href="./contacto.html"></a>Contacto</li>
-                <p>Todos los derechos reservados 2021 &copy;</p>
+                <table id="tabla-footer">
+                    <tr>
+                        <td id="lista_footer">
+                            <ul class=lista_horizontal>
+                                <li><a href="./kkkk.html"></a>Nosotros</li> <!--Se pone hash porque no tenemos el link todavía (buena práctica)-->
+                                <li><a href="./anuncios.html"></a>Anuncios</li>
+                                <li><a href="./blog.html"></a>Blog</li>
+                                <li><a href="./contacto.html"></a>Contacto</li>
+                                
+                            </ul>
+                        </td>
+                        <td id="derechos">
+                            <p>Todos los derechos reservados 2021 &copy;</p>
+                        </td>
+                    </tr>
+                </table>
             </nav>
         </footer>
     </main>    
